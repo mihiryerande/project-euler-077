@@ -1,4 +1,7 @@
-# Project Euler - Problem 77 - Prime Summations
+# Project Euler
+
+## Problem 77 - Prime Summations
+
 It is possible to write ten as the sum of primes in exactly five different ways:
 
     7 + 3
