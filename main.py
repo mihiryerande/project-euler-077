@@ -12,7 +12,7 @@
 # What is the first value which can be written as the sum of primes in over five thousand different ways?
 
 from math import floor, sqrt
-
+from typing import Tuple
 
 # Store already discovered primes
 PRIMES = []
@@ -23,7 +23,7 @@ NEXT_PRIME = dict()
 PRIME_SUM_WAYS = dict()
 
 
-def is_prime(n):
+def is_prime(n: int) -> bool:
     """
     Return True iff `n` is prime, using already computed list `PRIMES`.
 
@@ -58,7 +58,7 @@ def is_prime(n):
     return True
 
 
-def prime_sum_ways(n, max_prime):
+def prime_sum_ways(n: int, max_prime: int) -> int:
     """
     Returns the number of (unordered) ways to sum to `n`
       using only prime numbers which are at most `max_prime`.
@@ -113,7 +113,7 @@ def prime_sum_ways(n, max_prime):
         return ways
 
 
-def main(min_ways):
+def main(min_ways: int) -> Tuple[int, int]:
     """
     Returns the least number which can be expressed as a sum of primes in over `min_ways` ways.
 
@@ -121,7 +121,7 @@ def main(min_ways):
         min_ways (int): Natural number
 
     Returns:
-        (int, int):
+        (Tuple[int, int]):
             Tuple of ...
               * First number that can be summed by primes in over `min_ways` ways
               * Number of ways to sum to that number
